@@ -1,0 +1,55 @@
+@use '../../style/vars';
+
+.home {
+    padding-left: 1em;
+    margin-top: 7em;
+    @media screen and (min-width: 1024px) {
+        width: 70%;
+    }
+
+    &-title {
+        font-size: 4em;
+        margin-bottom: 1em;
+    }
+
+    &-text {
+        font-size: 2em;
+        line-height: 1.3em;
+
+        span {
+            text-decoration: underline;
+        }
+    }
+
+    &-button {
+        margin-top: 4em;
+        &-cv, &-contact {
+            padding: 1em;
+            text-transform: uppercase;
+            border: 1px solid vars.$darkColor;
+            cursor: pointer;
+            width: 100px;
+            @media screen and (min-width: 1024px) {
+                width: 150px;
+            }
+        }
+        &-cv {
+            background-color: vars.$darkColor;
+            color: vars.$lightColor;
+            margin-right: 2em;
+            &:hover {
+                background-color: vars.$lightColor;
+                color: vars.$darkColor;
+                transition: 0.3s;
+            }
+        }
+        &-contact {
+            background-color: vars.$lightColor;
+            &:hover {
+                background-color: vars.$darkColor;
+                color: vars.$lightColor;
+                transition: 0.3s;
+            }
+        }
+    }
+}
