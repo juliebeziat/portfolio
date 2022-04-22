@@ -1,5 +1,5 @@
 // == Import style
-import './App.css';
+import './App.scss';
 
 // == Import components
 import Menu from '../Menu';
@@ -13,15 +13,17 @@ import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Menu />
-      <Routes>
-        <Route path='/' element={<Home />}/>
-        <Route path='/competences' element={<Skills />}/>
-        <Route path='/projets' element={<Projects />}/>
-        <Route path='/contact' element={<Contact />}/>
-      </Routes>
-    </div>
+      <div className="App">
+        <Routes>
+          <Route path='/' element={<Home />}/>
+          <Route path='/competences' element={<Skills />}/>
+          <Route path='/projets' element={<Projects />}/>
+          <Route path='/contact' element={<Contact />}/>
+        </Routes>
+      </div>
+    </>
   );
 }
 

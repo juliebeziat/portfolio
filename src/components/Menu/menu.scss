@@ -1,0 +1,36 @@
+@use '../../style/vars';
+
+.menu {
+    position: absolute;
+    width: 10em;
+    height: 100vh;
+    border-right: 1px solid vars.$darkColor;
+
+    a {
+        text-decoration: none;
+        color: vars.$darkColor;
+    }
+
+    &-logo {
+        width: 80px;
+        height: 80px;
+        display: block;
+        margin: auto;
+    }
+
+    &-navbar {
+        margin-top: 5em;
+        padding-top: 3em;
+        border-top: 1px solid vars.$darkColor;
+        display: flex;
+        flex-wrap: wrap;
+        
+        &-nav {
+            margin: 2em 1em;
+        }
+
+        .active {
+            text-decoration: underline;
+        }
+    }
+}
