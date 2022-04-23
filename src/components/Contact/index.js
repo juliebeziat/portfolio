@@ -1,8 +1,12 @@
+import DesktopMenu from '../Menu/DesktopMenu';
 import './contact.scss';
 
 const Contact = () => {
     return (
-        <div>Contact</div>
+        <div>
+            Contact
+            <DesktopMenu />
+        </div>
     );
 };
 

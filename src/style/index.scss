@@ -5,6 +5,12 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: vars.$backgroundColor;
   position: relative;
+  ::selection {
+    background-color: vars.$infoColor;
+  }
+  height: 100vh;
+  outline: 5px solid vars.$infoColor;
+  outline-offset: -5px;
 }
 
 code {

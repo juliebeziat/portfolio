@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 // == Import components
 import MobileMenu from './MobileMenu';
-import DesktopMenu from './DesktopMenu';
+// import DesktopMenu from './DesktopMenu';
 
 const Menu = () => {
   // Declare a state variable to fetch window width
@@ -21,7 +21,7 @@ const Menu = () => {
   return (
     <div>
       {/* If width < 1024, then show MobileMenu (burger), if no, show DesktopMenu */}
-      {width < breakpoint ? <MobileMenu /> : <DesktopMenu />}
+      {width < breakpoint && <MobileMenu />}
     </div>
   );
 };

@@ -34,7 +34,7 @@
             text-transform: uppercase;
             border: 1px solid vars.$darkColor;
             cursor: pointer;
-            width: 100px;
+            width: 120px;
             @media screen and (min-width: 1024px) {
                 width: 150px;
             }
@@ -52,7 +52,7 @@
                 filter: invert(100%);
             }
             &:hover {
-                background-color: vars.$lightColor;
+                background-color: vars.$infoColor;
                 color: vars.$darkColor;
                 transition: 0.3s;
                 img {
@@ -70,7 +70,7 @@
                 padding: 0 .5em;
             }
             &:hover {
-                background-color: vars.$darkColor;
+                background-color: vars.$infoColor;
                 color: vars.$lightColor;
                 transition: 0.3s;
                 img {
