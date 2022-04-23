@@ -1,60 +1,66 @@
 @use '../../style/vars';
 
 .menu {
-    position: absolute;
-    width: 10em;
-    border-right: 1px solid vars.$darkColor;
-    height: 100vh;
-    z-index: 10;
-    background-color: vars.$backgroundColor;
 
-    animation: fadeIn 1s;
+  position: absolute;
+  width: 10em;
+  outline: 5px solid vars.$infoColor;
+  outline-offset: -5px;
+  height: 100vh;
+  z-index: 10;
+  background-color: vars.$backgroundColor;
+  right: 0;
 
-    @keyframes fadeIn {
-        from {
-        opacity: 0;
-        }
-        to {
-        opacity: 1;
-        }
-    }
-    
-    @media screen and (min-width: 1024px) {
-        &-burger {
-            display: none;
-        }
-    }
-    
-    &-burger {
-        background-color: transparent;
-        position: fixed;
-        right: 10px;
-        top: 10px;
-        
-        img {
-            width: 40px;
-            height: 40px;
-        }
-    }
-    
-    a {
-        text-decoration: none;
-        color: vars.$darkColor;
-    }
-    
-    &-navbar {
-        margin-top: 5em;
-        padding-top: 3em;
-        border-top: 1px solid vars.$darkColor;
-        display: flex;
-        flex-wrap: wrap;
-        
-        &-nav {
-            margin: 2em 1em;
-        }
+  animation: fadeIn 1s;
 
-        .active {
-            text-decoration: underline;
-        }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
     }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  &-burger {
+    background-color: transparent;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+
+    &.open {
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &.close {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: vars.$darkColor;
+  }
+
+  &-navbar {
+    margin-top: 5em;
+    padding-top: 3em;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-nav {
+      margin: 2em 1em;
+    }
+
+    .active {
+      text-decoration: underline;
+    }
+  }
 }

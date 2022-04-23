@@ -1,5 +1,7 @@
 // == Import style
-import './menu.scss';
+import './desktopmenu.scss';
+import Previous from '../../assets/icons/go_back.svg';
+import Next from '../../assets/icons/go_next.svg';
 
 // == Import utils
 import { NavLink } from 'react-router-dom';
@@ -61,8 +63,20 @@ const DesktopMenu = () => {
     <div>
       <div className='menu-buttons'>
         <nav className='menu-buttons-navbar'>
-          <NavLink to={buttonsName()[0].link} className='menu-buttons-navbar-nav'>{buttonsName()[0].name}</NavLink>
-          <NavLink to={buttonsName()[1].link} className='menu-buttons-navbar-nav'>{buttonsName()[1].name}</NavLink>
+          <NavLink
+            to={buttonsName()[0].link}
+            className='menu-buttons-navbar-nav'
+          >
+            <img className='menu-buttons-navbar-nav-icon previous' src={Previous} alt="" />
+            {buttonsName()[0].name}
+          </NavLink>
+          <NavLink
+            to={buttonsName()[1].link}
+            className='menu-buttons-navbar-nav'
+          >
+            {buttonsName()[1].name}
+            <img className='menu-buttons-navbar-nav-icon next' src={Next} alt="" />
+          </NavLink>
         </nav>
       </div>
     </div>

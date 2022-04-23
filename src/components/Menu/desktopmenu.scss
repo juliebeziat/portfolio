@@ -1,0 +1,54 @@
+@use '../../style/vars';
+
+.menu-buttons {
+  position: fixed;
+  bottom: 50px;
+  left: 80px;
+  width: 90%;
+
+  &-navbar {
+    display: flex;
+    justify-content: space-between;
+
+    &-nav {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: vars.$darkColor;
+      background-color: darken($color: vars.$backgroundColor, $amount: 5%);
+      padding: 1em;
+      border-radius: 3em;
+      border: 1px solid vars.$darkColor;
+      cursor: pointer;
+      width: 180px;
+      text-align: center;
+
+      &:hover {
+        transition: .3s;
+        background-color: vars.$darkColor;
+        color: vars.$lightColor;
+
+      }
+
+      &:hover &-icon {
+        transition: .3s;
+        filter: invert(100%);
+      }
+      
+      &-icon {
+        vertical-align: middle;
+        
+        &.previous {
+          margin-right: .5em;
+          width: 15px;
+          height: 15px;
+        }
+
+        &.next {
+          margin-left: .5em;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
