@@ -1,30 +1,19 @@
-import { NavLink } from 'react-router-dom';
+import MobileMenu from './MobileMenu';
 import './menu.scss';
-import MenuBurger from '../../assets/menu.svg';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import DesktopMenu from './DesktopMenu';
 
 const Menu = () => {
-  const [open, setOpen] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint = 1024;
 
-  const  toggleMenu = () => {
-    setOpen(!open);
-  };
+  useEffect(() => {
+    window.addEventListener("resize", () => setWidth(window.innerWidth));
+  }, []);
 
   return (
     <div>
-      <div>
-        <button onClick={toggleMenu} className="menu-burger">
-          <img src={MenuBurger} alt="" />
-        </button>
-      </div>
-      {open && <div className='menu'>
-        <nav className='menu-navbar'>
-          <NavLink to='/' className='menu-navbar-nav'>Home</NavLink>
-          <NavLink to='/competences' className='menu-navbar-nav'>Compétences</NavLink>
-          <NavLink to='/projets' className='menu-navbar-nav'>Projets</NavLink>
-          <NavLink to='/contact' className='menu-navbar-nav'>Contact</NavLink>
-        </nav>
-      </div>}
+      {width < breakpoint ? <MobileMenu /> : <DesktopMenu />}
     </div>
   );
 };
