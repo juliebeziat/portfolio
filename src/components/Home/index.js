@@ -13,10 +13,6 @@ const Home = () => {
           CV
           <img src={Arrow} alt="" />
         </button>
-        <button type="button" className="home-button-contact">
-          Contact
-          <img src={Arrow} alt="" />
-        </button>
       </div>
       <DesktopMenu />
     </div>

@@ -1,82 +1,73 @@
 @use '../../style/vars';
 
 .home {
-    margin-top: 7em;
+  margin-top: 7em;
+
+  @media screen and (min-width: 1024px) {
+    width: 70%;
+  }
+
+  &-title {
     @media screen and (min-width: 1024px) {
-        width: 70%;
+      font-size: 4em;
     }
 
-    &-title {
-        @media screen and (min-width: 1024px) {
-            font-size: 4em;
-        }
-        font-size: 3em;
-        margin-bottom: 1em;
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
+
+  &-text {
+    @media screen and (min-width: 1024px) {
+      font-size: 2em;
     }
 
-    &-text {
-        @media screen and (min-width: 1024px) {
-            font-size: 2em;
-        }
-        font-size: 1.5em;
-        line-height: 1.3em;
+    font-size: 1.5em;
+    line-height: 1.3em;
 
-        span {
-            text-decoration: underline;
-        }
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  &-button {
+    margin-top: 4em;
+
+    &-cv,
+    &-contact {
+      padding: 1em;
+      text-transform: uppercase;
+      border: 1px solid vars.$darkColor;
+      cursor: pointer;
+      width: 120px;
+
+      @media screen and (min-width: 1024px) {
+        width: 150px;
+      }
     }
 
-    &-button {
-        margin-top: 4em;
-        &-cv, &-contact {
-            padding: 1em;
-            text-transform: uppercase;
-            border: 1px solid vars.$darkColor;
-            cursor: pointer;
-            width: 120px;
-            @media screen and (min-width: 1024px) {
-                width: 150px;
-            }
-        }
+    &-cv {
+      background-color: vars.$darkColor;
+      color: vars.$lightColor;
+      margin-right: 2em;
 
-        &-cv {
-            background-color: vars.$darkColor;
-            color: vars.$lightColor;
-            margin-right: 2em;
-            img {
-                width: 10px;
-                height: 10px;
-                transform: rotate(315deg);
-                padding: 0 .5em;
-                filter: invert(100%);
-            }
-            &:hover {
-                background-color: vars.$infoColor;
-                color: vars.$darkColor;
-                transition: 0.3s;
-                img {
-                    filter: invert(0%);
-                }
-            }
-        }
+      img {
+        width: 10px;
+        height: 10px;
+        transform: rotate(315deg);
+        padding: 0 .5em;
+        filter: invert(100%);
+      }
 
-        &-contact {
-            background-color: vars.$lightColor;
-            img {
-                width: 10px;
-                height: 10px;
-                transform: rotate(-90deg);
-                padding: 0 .5em;
-            }
-            &:hover {
-                background-color: vars.$infoColor;
-                color: vars.$lightColor;
-                transition: 0.3s;
-                img {
-                    filter: invert(100%);
-                }
-            }
-        }
+      &:hover {
+        background-color: vars.$infoColor;
+        color: vars.$darkColor;
+        transition: 0.3s;
 
+        img {
+          filter: invert(0%);
+        }
+      }
     }
+
+  }
 }
