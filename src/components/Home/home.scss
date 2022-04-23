@@ -39,23 +39,45 @@
                 width: 150px;
             }
         }
+
         &-cv {
             background-color: vars.$darkColor;
             color: vars.$lightColor;
             margin-right: 2em;
+            img {
+                width: 10px;
+                height: 10px;
+                transform: rotate(315deg);
+                padding: 0 .5em;
+                filter: invert(100%);
+            }
             &:hover {
                 background-color: vars.$lightColor;
                 color: vars.$darkColor;
                 transition: 0.3s;
+                img {
+                    filter: invert(0%);
+                }
             }
         }
+
         &-contact {
             background-color: vars.$lightColor;
+            img {
+                width: 10px;
+                height: 10px;
+                transform: rotate(-90deg);
+                padding: 0 .5em;
+            }
             &:hover {
                 background-color: vars.$darkColor;
                 color: vars.$lightColor;
                 transition: 0.3s;
+                img {
+                    filter: invert(100%);
+                }
             }
         }
+
     }
 }
