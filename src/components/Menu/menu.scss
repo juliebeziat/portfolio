@@ -7,30 +7,41 @@
     height: 100vh;
     z-index: 10;
     background-color: vars.$backgroundColor;
+
+    animation: fadeIn 1s;
+
+    @keyframes fadeIn {
+        from {
+        opacity: 0;
+        }
+        to {
+        opacity: 1;
+        }
+    }
     
     @media screen and (min-width: 1024px) {
         &-burger {
             display: none;
         }
     }
-
+    
     &-burger {
         background-color: transparent;
         position: fixed;
         right: 10px;
         top: 10px;
-
+        
         img {
             width: 40px;
             height: 40px;
         }
     }
-
+    
     a {
         text-decoration: none;
         color: vars.$darkColor;
     }
-
+    
     &-navbar {
         margin-top: 5em;
         padding-top: 3em;
