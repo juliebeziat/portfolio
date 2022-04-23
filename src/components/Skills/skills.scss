@@ -1,0 +1,42 @@
+@use '../../style/vars';
+
+.skills {
+
+  &-title {
+    font-size: 2.5em;
+    margin: 3em 0 1em 0;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: 1440px) {
+      width: 50%;
+    }
+
+    &-skill {
+      background-color: vars.$lightColor;
+      margin: 1em;
+      width: 5em;
+      min-height: 4em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1em;
+      border-radius: 1em;
+      font-size: .8em;
+      text-align: center;
+
+      &-icon {
+        padding: 1em 2em;
+        width: 40px;
+        height: 40px;
+
+        &:hover {
+          transition: .2s;
+          filter: invert(11%) sepia(100%) saturate(6676%) hue-rotate(252deg) brightness(79%) contrast(138%);
+        }
+      }
+    }
+  }
+}
