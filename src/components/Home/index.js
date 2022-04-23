@@ -1,5 +1,6 @@
+// == Import style
 import './home.scss';
-import Arrow from '../../assets/arrow.svg';
+import Arrow from '../../assets/icons/arrow.svg';
 
 const Home = () => {
   return (

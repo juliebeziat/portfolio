@@ -1,5 +1,8 @@
-import { NavLink } from 'react-router-dom';
+// == Import style
 import './menu.scss';
+
+// == Import utils
+import { NavLink } from 'react-router-dom';
 
 const DesktopMenu = () => {
 

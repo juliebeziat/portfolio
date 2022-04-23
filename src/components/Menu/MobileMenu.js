@@ -1,9 +1,13 @@
-import { NavLink } from 'react-router-dom';
+// == Import style
 import './menu.scss';
-import MenuBurger from '../../assets/menu.svg';
+import MenuBurger from '../../assets/icons/menu.svg';
+
+// == Import utils
+import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 
 const MobileMenu = () => {
+  // Action to toggle mobile menu
   const [open, setOpen] = useState(false);
 
   const  toggleMenu = () => {
