@@ -3,8 +3,10 @@
 .menu-buttons {
   position: fixed;
   bottom: 50px;
-  left: 80px;
   width: 90%;
+  @media screen and (min-width: 1024px) {
+    left: 80px;
+  }
 
   &-navbar {
     display: flex;
@@ -19,8 +21,15 @@
       border-radius: 3em;
       border: 1px solid vars.$darkColor;
       cursor: pointer;
-      width: 180px;
       text-align: center;
+      
+      @media screen and (max-width: 425px) {
+        width: 120px;
+        font-size: .7em;
+        &:nth-child(1) {
+          margin-right: .5em;
+        }
+      }
 
       &:hover {
         transition: .3s;
@@ -41,12 +50,20 @@
           margin-right: .5em;
           width: 15px;
           height: 15px;
+          @media screen and (max-width: 425px) {
+            width: 10px;
+            height: 10px;
+          }
         }
 
         &.next {
           margin-left: .5em;
           width: 20px;
           height: 20px;
+          @media screen and (max-width: 425px) {
+            width: 15px;
+            height: 15px;
+          }
         }
       }
     }
