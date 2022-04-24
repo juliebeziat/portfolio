@@ -1,4 +1,5 @@
 @use '../../style/vars';
+@use '../../style/mixins';
 
 .home {
   margin-top: 7em;
@@ -33,15 +34,11 @@
     margin-top: 4em;
 
     &-cv {
-      padding: 1em;
-      text-transform: uppercase;
-      border: 1px solid vars.$darkColor;
-      cursor: pointer;
-      width: 120px;
-  
+      @include mixins.appButton;
       @media screen and (min-width: 1024px) {
         width: 150px;
       }
+      width: 120px;
       background-color: vars.$darkColor;
       color: vars.$lightColor;
       margin-right: 2em;
