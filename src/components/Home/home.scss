@@ -32,20 +32,16 @@
   &-button {
     margin-top: 4em;
 
-    &-cv,
-    &-contact {
+    &-cv {
       padding: 1em;
       text-transform: uppercase;
       border: 1px solid vars.$darkColor;
       cursor: pointer;
       width: 120px;
-
+  
       @media screen and (min-width: 1024px) {
         width: 150px;
       }
-    }
-
-    &-cv {
       background-color: vars.$darkColor;
       color: vars.$lightColor;
       margin-right: 2em;
@@ -60,11 +56,11 @@
 
       &:hover {
         background-color: vars.$infoColor;
-        color: vars.$darkColor;
+        color: vars.$lightColor;
         transition: 0.3s;
 
         img {
-          filter: invert(0%);
+          filter: invert(100%);
         }
       }
     }

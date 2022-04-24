@@ -4,6 +4,7 @@
   position: fixed;
   bottom: 50px;
   width: 90%;
+
   @media screen and (min-width: 1024px) {
     left: 80px;
   }
@@ -22,25 +23,13 @@
       border: 1px solid vars.$darkColor;
       cursor: pointer;
       text-align: center;
+      width: 150px;
       
       @media screen and (max-width: 425px) {
-        width: 120px;
         font-size: .7em;
         &:nth-child(1) {
           margin-right: .5em;
         }
-      }
-
-      &:hover {
-        transition: .3s;
-        background-color: vars.$darkColor;
-        color: vars.$lightColor;
-
-      }
-
-      &:hover &-icon {
-        transition: .3s;
-        filter: invert(100%);
       }
       
       &-icon {
