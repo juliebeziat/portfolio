@@ -1,7 +1,6 @@
 // == Import style
 import './home.scss';
 import Arrow from '../../assets/icons/arrow.svg';
-import DesktopMenu from '../Menu/DesktopMenu';
 // import ModalCV from '../Modal/CV';
 
 const Home = () => (
@@ -14,7 +13,6 @@ const Home = () => (
         <img src={Arrow} alt="" />
       </button>
     </div>
-    <DesktopMenu />
     {/* <ModalCV /> */}
   </div>
 );

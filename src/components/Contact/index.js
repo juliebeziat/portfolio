@@ -1,4 +1,3 @@
-import DesktopMenu from '../Menu/DesktopMenu';
 import './contact.scss';
 import GitHub from '../../assets/icons/github.svg';
 import LinkedIn from '../../assets/icons/linkedin.svg';
@@ -7,7 +6,6 @@ import Gif from '../../assets/gif/junimo.webp';
 
 const Contact = () => (
   <div className="contact">
-    <DesktopMenu />
     <div className="contact-header">
       <h1>Me contacter</h1>
     </div>

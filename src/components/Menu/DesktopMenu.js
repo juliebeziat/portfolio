@@ -3,83 +3,18 @@ import { NavLink } from 'react-router-dom';
 
 // == Import style
 import './desktopmenu.scss';
-import Previous from '../../assets/icons/go_back.svg';
-import Next from '../../assets/icons/go_next.svg';
+import Logo from '../../assets/icons/logo-julie.png';
+import Toggle from '../../assets/icons/toggle.svg';
 
-const DesktopMenu = () => {
-  // Function to change name and link of buttons on different pages of the app
-  const buttonsName = () => {
-    switch (window.location.pathname) {
-      case '/':
-        return [
-          {
-            name: 'Contact',
-            link: '/contact',
-          },
-          {
-            name: 'Compétences',
-            link: '/competences',
-          },
-        ];
-      case '/competences':
-        return [
-          {
-            name: 'Accueil',
-            link: '/',
-          },
-          {
-            name: 'Projets',
-            link: '/projets',
-          },
-        ];
-      case '/projets':
-        return [
-          {
-            name: 'Compétences',
-            link: '/competences',
-          },
-          {
-            name: 'Contact',
-            link: '/contact',
-          },
-        ];
-      case '/contact':
-        return [
-          {
-            name: 'Projets',
-            link: '/projets',
-          },
-          {
-            name: 'Accueil',
-            link: '/',
-          },
-        ];
-      default: return '/';
-    }
-  };
-
-  return (
-    <div>
-      <div className="menu-buttons">
-        <nav className="menu-buttons-navbar">
-          <NavLink
-            to={buttonsName()[0].link}
-            className="menu-buttons-navbar-nav"
-          >
-            <img className="menu-buttons-navbar-nav-icon previous" src={Previous} alt="" />
-            {buttonsName()[0].name}
-          </NavLink>
-          <NavLink
-            to={buttonsName()[1].link}
-            className="menu-buttons-navbar-nav"
-          >
-            {buttonsName()[1].name}
-            <img className="menu-buttons-navbar-nav-icon next" src={Next} alt="" />
-          </NavLink>
-        </nav>
-      </div>
-    </div>
-  );
-};
+const DesktopMenu = () => (
+  <div className="desktop-menu">
+    <NavLink to="/"><img className="desktop-menu-logo" src={Logo} alt="logo-portfolio" /></NavLink>
+    <NavLink to="/" className="desktop-menu-nav">Accueil</NavLink>
+    <NavLink to="/competences" className="desktop-menu-nav">Compétences</NavLink>
+    <div><img className="desktop-menu-icon" src={Toggle} alt="dark-light-mode" /></div>
+    <NavLink to="/projets" className="desktop-menu-nav">Projets</NavLink>
+    <NavLink to="/contact" className="desktop-menu-nav">Contact</NavLink>
+  </div>
+);
 
 export default DesktopMenu;

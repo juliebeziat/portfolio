@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 import './skills.scss';
 import dataSkills from '../../functions/icons';
-import DesktopMenu from '../Menu/DesktopMenu';
 
 const Skills = () => (
   <div className="about-skills">
@@ -21,7 +20,6 @@ const Skills = () => (
           </li>
         ))}
       </ul>
-      <DesktopMenu />
     </div>
   </div>
 );

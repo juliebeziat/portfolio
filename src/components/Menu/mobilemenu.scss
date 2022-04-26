@@ -1,16 +1,11 @@
 @use '../../style/vars';
 
 .menu {
-
   position: absolute;
   width: 10em;
-  outline: 5px solid vars.$mainColor;
-  outline-offset: -5px;
-  height: 100vh;
   z-index: 10;
   background-color: vars.$backgroundColor;
   right: 0;
-
   animation: fadeIn 1s;
 
   @keyframes fadeIn {
@@ -34,6 +29,7 @@
       right: 10px;
       top: 10px;
       img {
+        filter: invert(66%) sepia(13%) saturate(5496%) hue-rotate(122deg) brightness(89%) contrast(98%);
         width: 40px;
         height: 40px;
       }
@@ -45,6 +41,7 @@
       img {
         width: 30px;
         height: 30px;
+        filter: invert(100%);
       }
     }
   }
@@ -56,16 +53,22 @@
 
   &-navbar {
     margin-top: 5em;
-    padding-top: 3em;
     display: flex;
     flex-wrap: wrap;
 
+    a {
+      color: vars.$lightColor;
+    }
+    
     &-nav {
-      margin: 2em 1em;
+      margin: 1em;
+      width: 100%;
+      padding: 1em 0.5em;
+      border-radius: .3em;
     }
 
     .active {
-      text-decoration: underline;
+      background-color: vars.$secondaryColor;
     }
   }
 }

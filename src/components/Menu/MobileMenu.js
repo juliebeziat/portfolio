@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 
 // == Import style
-import './menu.scss';
+import './mobilemenu.scss';
 import MenuBurger from '../../assets/icons/menu.svg';
 import Cross from '../../assets/icons/cross.svg';
 
