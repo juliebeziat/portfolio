@@ -3,15 +3,10 @@ import './skills.scss';
 import dataSkills from '../../functions/icons';
 
 const Skills = () => (
-  <div className="about-skills" id="competences">
-    <div className="about">
-      <h1 className="about-title">À propos de moi</h1>
-      <p>Après une formation en développement web de 6 mois chez l'école O'Clock où j'ai pu expérimenter plusieurs langages, frameworks et librairies, j'ai décidé de m'orienter vers une alternance au sein de la même structure dans le but d'approfondir mes connaissances sur la programmation tout en apportant mes compétences au sein d'une entreprise.</p>
-      <p>Issue d'une formation complète en Marketing digital, j'ai pu découvrir le monde du développement web il y a quelques années grâce à une de mes expériences dans laquelle je travaillais directement auprès de développeurs et développeuses web. </p>
-      <p>Ayant toujours été très passionnée par l'informatique en général, et après avoir découvert le monde du développement web, je peux enfin dire que j'ai trouvé ma voie. Effectivement, ce monde nous offre la possibilité de créer et surtout d'apprendre et ce de façon illimitée, deux notions quasi indispensables à mon bien-être. Tout cela agrémenter d'un côté technique et logique, je suis aujourd'hui passionnée et très fière à l'idée de passer mes journées à coder (et à faire des commit !).</p>
-    </div>
+  <div id="competences">
     <div className="skills">
-      <h1 className="skills-title">Compétences</h1>
+      <h1 className="skills-title"><span>*</span>Compétences</h1>
+      <h2 className="subtitle"><span>•</span> Les langages, outils et frameworks que j’utilise</h2>
       <ul className="skills-list">
         {dataSkills.map((skill) => (
           <li className="skills-list-skill" key={skill.icon}>
@@ -20,6 +15,29 @@ const Skills = () => (
           </li>
         ))}
       </ul>
+    </div>
+    <div className="secondary-skills">
+      <h2 className="subtitle"><span>♥</span> Ce que je vais approfondir et apprendre lors de ma formation en alternance, dans l’ordre du programme</h2>
+      <div className="secondary-skills-lists">
+        <ul>
+          <li>PHP &amp; POO</li>
+          <li>Conception (architecture synchrone, MVC)</li>
+          <li>SGBDR</li>
+          <li>Laravel</li>
+          <li>JavaScript &amp; Vue.js</li>
+          <li>Cloud Computing (Serverless, FaaS, etc.)</li>
+          <li>Schémas UML</li>
+        </ul>
+        <ul>
+          <li>Gestion de projet</li>
+          <li>Node.js &amp; Express</li>
+          <li>NoSQL</li>
+          <li>API (REST, GraphQL, Websocket)</li>
+          <li>Sécurité &amp; Multiplateformes</li>
+          <li>Failles de sécurité et parafes (OWASP, injections)</li>
+          <li>Développement Mobile et Desktop (Flutter)</li>
+        </ul>
+      </div>
     </div>
   </div>
 );

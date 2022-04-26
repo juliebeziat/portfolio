@@ -1,82 +1,73 @@
 @use '../../style/vars';
 @use '../../style/mixins';
 
-.about-skills {
-  margin-top: 4em;
-  @media screen and (min-width: 1440px) {
-    display: flex;
-  }
-  
-  // Scrollbar
-  @media screen and (max-width: 1024px) {
-    height: calc(100vh - 6em);
-    overflow-y: scroll;
-    &::-webkit-scrollbar-thumb {
-      border-radius: 25px;
-      background-color: black;
-    }
-    &::-webkit-scrollbar {
-      width: 6px;
-    }
-    &::-webkit-scrollbar {
-      border-radius: 25px;
-    }
-  }
-}
-
-.about {
-  margin: 1em;
-  @media screen and (min-width: 1440px) {
-    margin-right: 8em;
-    width: 70%;
-  }
-  &-title {
-    @include mixins.mainTitle;
-  }
-
-  p {
-    margin-bottom: 2em;
-    line-height: 1.4em;
-    text-align: justify;
-  }
+#competences {
+  margin-bottom: 10em;
+  margin: 0 0 10em 1em;
 }
 
 .skills {
-  margin: 1em;
   @media screen and (max-width: 1440px) {
     margin-bottom: 5em;
   }
   &-title {
     @include mixins.mainTitle;
+
+    & span {
+      font-family: source-code-pro, 'Courier New', monospace;
+      color: vars.$thirdColor;
+    }
+  }
+
+  .subtitle {
+    font-size: 1.2em;
+
+    span {
+      color: vars.$mainColor;
+    }
   }
 
   &-list {
     display: flex;
     flex-wrap: wrap;
+    @media screen and (min-width: 1440px) {
+      width: 60%;
+    }
+    @media screen and (min-width: 1024px) {
+      width: 70%;
+    }
+
     &-skill {
       width: 7em;
       @media screen and (max-width: 320px) {
         width: 5em;
       }
-      background-color: vars.$lightColor;
-      margin: 1em 2em 1em 0;
+      background-color: vars.$hoverColor;
+      margin: 3em 3em 1em 0;
       min-height: 7em;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       padding: 1em;
-      border-radius: 1em;
+      border-radius: .5em;
       font-size: .8em;
       text-align: center;
 
-      &:hover &-icon {
-        transition: .8s;
-        filter: invert(53%) sepia(7%) saturate(2160%) hue-rotate(70deg) brightness(93%) contrast(80%);
+      &:nth-child(odd) {
+        img {
+          @include mixins.filterMainColor;
+        }
+      }
+
+      &:nth-child(even) {
+        img {
+          @include mixins.filterSecondaryColor;
+        }
       }
 
       &:hover {
         transition: .8s;
-        box-shadow: 0px 0px 27px 2px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 20px 2px rgba(255, 255, 255, 0.4);
       }
 
       &-icon {
@@ -86,5 +77,36 @@
 
       }
     }
+  }
+}
+
+.secondary-skills {
+  margin-top: 5em;
+
+  .subtitle {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+
+    span {
+      color: vars.$secondaryColor;
+    }
+  }
+
+  &-lists {
+    @media screen and (min-width: 426px) {
+      display: flex;
+    }
+  }
+
+  ul {
+    ::before {
+      content: '•';
+      margin-right: .5em;
+    }
+    margin-right: 1em;
+    @media screen and (min-width: 769px) {
+      margin-right: 10em;
+    }
+    line-height: 1.5em;
   }
 }

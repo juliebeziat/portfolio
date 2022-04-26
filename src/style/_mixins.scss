@@ -30,7 +30,16 @@
 @mixin mainTitle {
   font-size: 2.5em;
   margin-bottom: .5em;
-  @media screen and (min-width: 1440px) {
-    margin-bottom: 2em;
-  }
+}
+
+@mixin filterMainColor {
+  filter: invert(54%) sepia(86%) saturate(435%) hue-rotate(119deg) brightness(94%) contrast(100%);
+}
+
+@mixin filterSecondaryColor {
+  filter: invert(49%) sepia(13%) saturate(1807%) hue-rotate(225deg) brightness(93%) contrast(86%);
+}
+
+@mixin filterThirdColor {
+  filter: invert(74%) sepia(29%) saturate(7226%) hue-rotate(325deg) brightness(104%) contrast(90%);
 }

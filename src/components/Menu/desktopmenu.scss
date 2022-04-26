@@ -1,10 +1,8 @@
 @use '../../style/vars';
 
 .section-menu {
-  width: 100%;
-  background-color: vars.$backgroundColor;
-  padding: 2em;
-  
+  padding: 2em 5em;
+
   .desktop-menu {
     width: 50%;
     display: flex;
