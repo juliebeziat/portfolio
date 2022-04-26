@@ -1,0 +1,66 @@
+@use '../../style/vars';
+@use '../../style/mixins';
+
+.home {
+  margin-top: 7em;
+
+  @media screen and (min-width: 1024px) {
+    width: 70%;
+  }
+
+  &-title {
+    @media screen and (min-width: 1024px) {
+      font-size: 4em;
+    }
+
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
+
+  &-text {
+    @media screen and (min-width: 1024px) {
+      font-size: 2em;
+    }
+
+    font-size: 1.5em;
+    line-height: 1.3em;
+
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  &-button {
+    margin-top: 4em;
+
+    &-cv {
+      @include mixins.appButton;
+      @media screen and (min-width: 1024px) {
+        width: 150px;
+      }
+      width: 120px;
+      background-color: vars.$darkColor;
+      color: vars.$lightColor;
+      margin-right: 2em;
+
+      img {
+        width: 10px;
+        height: 10px;
+        transform: rotate(315deg);
+        padding: 0 .5em;
+        filter: invert(100%);
+      }
+
+      &:hover {
+        background-color: vars.$infoColor;
+        color: vars.$lightColor;
+        transition: 0.3s;
+
+        img {
+          filter: invert(100%);
+        }
+      }
+    }
+
+  }
+}

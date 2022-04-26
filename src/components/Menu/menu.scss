@@ -1,0 +1,71 @@
+@use '../../style/vars';
+
+.menu {
+
+  position: absolute;
+  width: 10em;
+  outline: 5px solid vars.$infoColor;
+  outline-offset: -5px;
+  height: 100vh;
+  z-index: 10;
+  background-color: vars.$backgroundColor;
+  right: 0;
+
+  animation: fadeIn 1s;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  &-burger {
+    background-color: transparent;
+    position: fixed;
+    cursor: pointer;
+    transform-origin: 1px;
+    
+    
+    &.open {
+      right: 10px;
+      top: 10px;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &.close {
+      right: 15px;
+      top: 15px;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: vars.$darkColor;
+  }
+
+  &-navbar {
+    margin-top: 5em;
+    padding-top: 3em;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-nav {
+      margin: 2em 1em;
+    }
+
+    .active {
+      text-decoration: underline;
+    }
+  }
+}

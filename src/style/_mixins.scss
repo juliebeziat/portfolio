@@ -1,0 +1,36 @@
+@use './vars';
+
+@mixin modalBackground {
+  background-color: vars(250, 224, 224, 0.7);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  backdrop-filter: blur(2px);
+}
+
+@mixin modalContent {
+  margin: auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+@mixin appButton {
+  padding: 1em;
+  text-transform: uppercase;
+  border: 1px solid vars.$darkColor;
+  cursor: pointer;
+}
+
+@mixin mainTitle {
+  font-size: 2.5em;
+  margin-bottom: .5em;
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 2em;
+  }
+}

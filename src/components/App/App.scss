@@ -1,0 +1,8 @@
+@use 'src/style/vars';
+
+.App {
+    @media screen and (min-width: 1024px) {
+        padding: 2em 5em;
+    }
+    padding: 1em;
+}

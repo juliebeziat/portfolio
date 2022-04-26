@@ -1,0 +1,60 @@
+@use '../../style/vars';
+
+.menu-buttons {
+  position: fixed;
+  bottom: 50px;
+  width: 90%;
+
+  @media screen and (min-width: 1024px) {
+    left: 80px;
+  }
+
+  &-navbar {
+    display: flex;
+    justify-content: space-between;
+
+    &-nav {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: vars.$darkColor;
+      background-color: darken($color: vars.$backgroundColor, $amount: 5%);
+      padding: 1em;
+      border-radius: 3em;
+      border: 1px solid vars.$darkColor;
+      cursor: pointer;
+      text-align: center;
+      width: 150px;
+      
+      @media screen and (max-width: 425px) {
+        font-size: .7em;
+        &:nth-child(1) {
+          margin-right: .5em;
+        }
+      }
+      
+      &-icon {
+        vertical-align: middle;
+        
+        &.previous {
+          margin-right: .5em;
+          width: 15px;
+          height: 15px;
+          @media screen and (max-width: 425px) {
+            width: 10px;
+            height: 10px;
+          }
+        }
+
+        &.next {
+          margin-left: .5em;
+          width: 20px;
+          height: 20px;
+          @media screen and (max-width: 425px) {
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
+  }
+}
