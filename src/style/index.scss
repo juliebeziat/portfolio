@@ -2,18 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
+  h1, h2, h3 {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  }
   font-family: 'Inter', sans-serif;
   background-color: vars.$backgroundColor;
+  color: vars.$lightColor;
   position: relative;
-  ::selection {
-    background-color: vars.$infoColor;
-  }
   height: 100vh;
-  outline: 5px solid vars.$infoColor;
-  outline-offset: -5px;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  ::selection {
+    background-color: vars.$mainColor;
+  }
 }

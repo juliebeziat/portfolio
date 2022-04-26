@@ -41,7 +41,7 @@
       }
       @include mixins.appButton;
       &:nth-child(1) {
-        background-color: vars.$infoColor;
+        background-color: vars.$mainColor;
       }
     }
   }

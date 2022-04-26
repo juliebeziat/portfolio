@@ -23,7 +23,7 @@
 @mixin appButton {
   padding: 1em;
   text-transform: uppercase;
-  border: 1px solid vars.$darkColor;
+  border: 1px solid vars.$lightColor;
   cursor: pointer;
 }
 
