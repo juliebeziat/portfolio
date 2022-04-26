@@ -16,7 +16,7 @@ const Home = () => {
         </button>
       </div>
       <DesktopMenu />
-      {/* <ModalCV /> */}
+      <ModalCV />
     </div>
   );
 };
