@@ -26,3 +26,11 @@
   border: 1px solid vars.$darkColor;
   cursor: pointer;
 }
+
+@mixin mainTitle {
+  font-size: 2.5em;
+  margin-bottom: .5em;
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 2em;
+  }
+}

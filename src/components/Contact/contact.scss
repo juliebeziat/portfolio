@@ -1,0 +1,61 @@
+@use '../../style/vars';
+@use '../../style/mixins';
+
+.contact {
+  margin-top: 4em;
+
+  &-header {
+    h1 {
+      @include mixins.mainTitle;
+    }
+  }
+
+  &-container {
+    display: flex;
+  }
+
+  &-gif {
+    img {
+      width: 150px;
+    }
+  }
+
+  &-content {
+    background-color: vars.$lightColor;
+    padding: 1em;
+    border-radius: .5em;
+    width: 20%;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-icon {
+      width: 100%;
+      margin-bottom: 1em;
+    }
+
+    &-mail {
+      width: 100%;
+      color: vars.$darkColor;
+    }
+
+    &-phone {
+      width: 100%;
+      margin-top: 1em;
+    }
+  }
+
+  &-social {
+    display: flex;
+    flex-wrap: wrap;
+    width: 5%;
+    margin-left: 1em;
+    &-icon {
+      background-color: vars.$lightColor;
+      padding: 1em;
+      border-radius: .5em;
+      margin-bottom: 1em;
+    }
+  }
+}
