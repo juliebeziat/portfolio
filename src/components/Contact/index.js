@@ -5,7 +5,7 @@ import Mail from '../../assets/icons/mail.svg';
 import Gif from '../../assets/gif/junimo.webp';
 
 const Contact = () => (
-  <div className="contact">
+  <div className="contact" id="contact">
     <div className="contact-header">
       <h1>Me contacter</h1>
     </div>

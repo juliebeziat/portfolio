@@ -3,7 +3,7 @@ import './skills.scss';
 import dataSkills from '../../functions/icons';
 
 const Skills = () => (
-  <div className="about-skills">
+  <div className="about-skills" id="competences">
     <div className="about">
       <h1 className="about-title">À propos de moi</h1>
       <p>Après une formation en développement web de 6 mois chez l'école O'Clock où j'ai pu expérimenter plusieurs langages, frameworks et librairies, j'ai décidé de m'orienter vers une alternance au sein de la même structure dans le but d'approfondir mes connaissances sur la programmation tout en apportant mes compétences au sein d'une entreprise.</p>
