@@ -1,81 +1,80 @@
+// == Import utils
+import { NavLink } from 'react-router-dom';
+
 // == Import style
 import './desktopmenu.scss';
 import Previous from '../../assets/icons/go_back.svg';
 import Next from '../../assets/icons/go_next.svg';
 
-// == Import utils
-import { NavLink } from 'react-router-dom';
-
 const DesktopMenu = () => {
-
   // Function to change name and link of buttons on different pages of the app
   const buttonsName = () => {
     switch (window.location.pathname) {
-      case '/': 
+      case '/':
         return [
           {
             name: 'Contact',
-            link: '/contact'
+            link: '/contact',
           },
           {
             name: 'Compétences',
-            link: '/competences'
-          }
+            link: '/competences',
+          },
         ];
-      case '/competences': 
+      case '/competences':
         return [
           {
             name: 'Accueil',
-            link: '/'
+            link: '/',
           },
           {
             name: 'Projets',
-            link: '/projets'
+            link: '/projets',
           },
         ];
-      case '/projets': 
+      case '/projets':
         return [
           {
             name: 'Compétences',
-            link: '/competences'
+            link: '/competences',
           },
           {
             name: 'Contact',
-            link: '/contact'
+            link: '/contact',
           },
         ];
-      case '/contact': 
+      case '/contact':
         return [
           {
             name: 'Projets',
-            link: '/projets'
+            link: '/projets',
           },
           {
             name: 'Accueil',
-            link: '/'
+            link: '/',
           },
         ];
       default: return '/';
-    };
+    }
   };
 
   return (
     <div>
-      <div className='menu-buttons'>
-        <nav className='menu-buttons-navbar'>
+      <div className="menu-buttons">
+        <nav className="menu-buttons-navbar">
           <NavLink
             to={buttonsName()[0].link}
-            className='menu-buttons-navbar-nav'
+            className="menu-buttons-navbar-nav"
           >
-            <img className='menu-buttons-navbar-nav-icon previous' src={Previous} alt="" />
+            <img className="menu-buttons-navbar-nav-icon previous" src={Previous} alt="" />
             {buttonsName()[0].name}
           </NavLink>
           <NavLink
             to={buttonsName()[1].link}
-            className='menu-buttons-navbar-nav'
+            className="menu-buttons-navbar-nav"
           >
             {buttonsName()[1].name}
-            <img className='menu-buttons-navbar-nav-icon next' src={Next} alt="" />
+            <img className="menu-buttons-navbar-nav-icon next" src={Next} alt="" />
           </NavLink>
         </nav>
       </div>

@@ -12,55 +12,54 @@ import sass from '../assets/icons_skills/sass.svg';
 import vscode from '../assets/icons_skills/vs-code.svg';
 
 const dataSkills = [
-
-    {
-        icon: html, 
-        title: 'HTML'
-    },
-    {
-        icon: css, 
-        title: 'CSS'
-    },
-    {
-        icon: sass, 
-        title: 'SASS'
-    },
-    {
-        icon: bootstrap, 
-        title: 'BootStrap'
-    },
-    {
-        icon: js, 
-        title: 'JavaScript'
-    },
-    {
-        icon: mysql, 
-        title: 'My SQL'
-    },
-    {
-        icon: php, 
-        title: 'PHP'
-    },
-    {
-        icon: react, 
-        title: 'React JS'
-    },
-    {
-        icon: redux, 
-        title: 'Redux'
-    },
-    {
-        icon: github, 
-        title: 'GitHub'
-    },
-    {
-        icon: vscode, 
-        title: 'VSCode'
-    },
-    {
-        icon: linux, 
-        title: 'Linux Ubuntu'
-    },
+  {
+    icon: html,
+    title: 'HTML',
+  },
+  {
+    icon: css,
+    title: 'CSS',
+  },
+  {
+    icon: sass,
+    title: 'SASS',
+  },
+  {
+    icon: bootstrap,
+    title: 'BootStrap',
+  },
+  {
+    icon: js,
+    title: 'JavaScript',
+  },
+  {
+    icon: mysql,
+    title: 'My SQL',
+  },
+  {
+    icon: php,
+    title: 'PHP',
+  },
+  {
+    icon: react,
+    title: 'React JS',
+  },
+  {
+    icon: redux,
+    title: 'Redux',
+  },
+  {
+    icon: github,
+    title: 'GitHub',
+  },
+  {
+    icon: vscode,
+    title: 'VSCode',
+  },
+  {
+    icon: linux,
+    title: 'Linux Ubuntu',
+  },
 ];
 
 export default dataSkills;
