@@ -1,0 +1,47 @@
+@use '../../../style/vars';
+@use '../../../style/mixins';
+
+.modal-alt {
+  @include mixins.modalBackground;
+  
+  &-content {
+    img {
+      width: 18px;
+      @include mixins.filterMainColor;
+      position: fixed;
+      right: 20px;
+    }
+    @include mixins.modalContent;
+    @media screen and (max-width: 768px) {
+      width: 80%;
+    }
+    width: 30%;
+    height: fit-content;
+    padding: 1em;
+    border-radius: .1em;
+
+    h2 {
+      font-family: source-code-pro, 'Courier New', monospace;
+      font-size: 1.1em;
+      margin: 1em 0;
+      span {
+        color: vars.$thirdColor;
+      }
+    }
+
+    ul {
+      font-size: .8em;
+      line-height: 1.5em;
+      font-weight: 200;
+      ::before {
+        content: '•';
+        margin-right: .5em;
+        color: vars.$secondaryColor;
+      }
+    }
+
+    .infos {
+      margin-bottom: 1em;
+    }
+  }
+}

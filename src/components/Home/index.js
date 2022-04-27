@@ -1,6 +1,7 @@
 // == Import style
 import './home.scss';
 import Portrait from '../../assets/icons/portrait-julie.png';
+// import ModalAlt from '../Modal/Alternance';
 
 const Home = () => (
   <div className="app-container">
@@ -18,6 +19,7 @@ const Home = () => (
         </div>
       </div>
     </div>
+    {/* <ModalAlt /> */}
   </div>
 );
 

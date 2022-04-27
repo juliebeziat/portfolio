@@ -18,6 +18,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+  background-color: lighten($color: vars.$darkColor, $amount: 10%);
 }
 
 @mixin appButton {
