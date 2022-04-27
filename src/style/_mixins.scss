@@ -43,3 +43,41 @@
 @mixin filterThirdColor {
   filter: invert(74%) sepia(29%) saturate(7226%) hue-rotate(325deg) brightness(104%) contrast(90%);
 }
+
+@mixin buttonLink {
+  display: block;
+  width: fit-content;
+  color: vars.$lightColor;
+  text-decoration: none;
+  font-family: source-code-pro, 'Courier New', monospace;
+  font-size: .9em;
+  padding: .8em;
+  border-radius: .1em;
+  margin-bottom: 1em;
+
+  img {
+    filter: invert(100%);
+    transform: rotate(180deg);
+    width: 10px;
+  }
+
+  &:nth-child(1) {
+    margin-right: 1em;
+    background-color: darken($color: vars.$mainColor, $amount: 20%);
+
+    &:hover {
+      background-color: vars.$mainColor;
+      transition: .3s;
+    }
+  }
+
+  &:nth-child(2) {
+    margin-right: 1em;
+    background-color: darken($color: vars.$secondaryColor, $amount: 20%);
+
+    &:hover {
+      background-color: vars.$secondaryColor;
+      transition: .3s;
+    }
+  }
+}

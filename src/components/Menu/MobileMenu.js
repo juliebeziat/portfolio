@@ -17,6 +17,7 @@ const MobileMenu = () => {
 
   return (
     <div>
+      <hr />
       <div>
         <button type="button" onClick={toggleMenu} className="menu-burger open">
           <img src={MenuBurger} alt="" />

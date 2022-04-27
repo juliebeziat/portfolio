@@ -2,60 +2,93 @@
 @use '../../style/mixins';
 
 .contact {
-  margin-top: 4em;
+  margin: 3em 0 2em 1em;
 
-  &-header {
+  &-title {
     h1 {
       @include mixins.mainTitle;
+      span {
+        color: vars.$thirdColor;
+        font-family: source-code-pro, 'Courier New', monospace;
+      }
     }
   }
 
   &-container {
-    display: flex;
-  }
-
-  &-gif {
-    img {
-      width: 150px;
+    @media screen and (min-width: 1024px) {
+      display: flex;
     }
   }
 
-  &-content {
-    background-color: vars.$lightColor;
-    padding: 1em;
-    border-radius: .5em;
-    width: 20%;
-    height: 100px;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-
-    &-icon {
-      width: 100%;
+  .about {
+    @media screen and (min-width: 1024px) {
+      width: 40%;
+      margin-right: 8em;
+    }
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 3em;
+    }
+    &-title {
+      font-family: source-code-pro, 'Courier New', monospace;
       margin-bottom: 1em;
+      font-size: 1.2em;
     }
 
-    &-mail {
-      width: 100%;
-      color: vars.$darkColor;
-    }
-
-    &-phone {
-      width: 100%;
-      margin-top: 1em;
+    p {
+      font-weight: 200;
+      line-height: 1.2em;
+      margin-bottom: 1em;
+      font-size: .9em;
     }
   }
 
-  &-social {
-    display: flex;
-    flex-wrap: wrap;
-    width: 5%;
-    margin-left: 1em;
-    &-icon {
-      background-color: vars.$lightColor;
+  .infos {
+    &-title {
+      font-family: source-code-pro, 'Courier New', monospace;
+      margin-bottom: 1em;
+      font-size: 1.2em;
+    }
+
+    span {
+      color: #FF0B71;
+    }
+
+    &-links {
+      display: flex;
+      @media screen and (max-width: 320px) {
+        font-size: .9em;
+      }
+      a {
+        @include mixins.buttonLink;
+      }
+    }
+
+    &-content {
+      @media screen and (max-width: 1024px) {
+        width: fit-content;
+      }
+      background-color: vars.$hoverColor;
       padding: 1em;
-      border-radius: .5em;
-      margin-bottom: 1em;
+      border-radius: .1em;
+
+      p {
+        font-size: .8em;
+        margin-bottom: .5em;
+        color: darken($color: vars.$lightColor, $amount: 40);
+        img {
+          filter: invert(100%);
+          width: 10px;
+          margin-right: .3em;
+        }
+        a {
+          color: vars.$lightColor;
+          text-decoration: none;
+        }
+        span {
+          color: vars.$lightColor;
+        }
+      }
+
     }
   }
 }

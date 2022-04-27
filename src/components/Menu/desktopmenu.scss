@@ -7,6 +7,7 @@
     width: 50%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1em;
   
     &-logo  {
       width: 20px;
@@ -21,4 +22,11 @@
       }
     }
   }
+}
+
+hr {
+  height: 2px;
+  background: rgb(3,196,161);
+  background: linear-gradient(90deg, rgba(3,196,161,1) 0%, rgba(145,107,191,1) 51%, rgba(242,125,91,1) 100%);
+  border: none;
 }
