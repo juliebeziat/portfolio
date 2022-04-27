@@ -24,10 +24,10 @@ const MobileMenu = () => {
       </div>
       {open && (
       <div className="menu">
+        <button type="button" onClick={toggleMenu} className="menu-burger close">
+          <img src={Cross} alt="" />
+        </button>
         <nav className="menu-navbar">
-          <button type="button" onClick={toggleMenu} className="menu-burger close">
-            <img src={Cross} alt="" />
-          </button>
           <NavLink to="/" className="menu-navbar-nav">Home</NavLink>
           <NavLink to="/competences" className="menu-navbar-nav">Compétences</NavLink>
           <NavLink to="/projets" className="menu-navbar-nav">Projets</NavLink>

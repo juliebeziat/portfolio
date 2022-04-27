@@ -12,27 +12,13 @@
       width: 20px;
     }
   
-    &-icon {
-      filter: invert(49%) sepia(13%) saturate(1807%) hue-rotate(225deg) brightness(93%) contrast(86%);
-    }
-  
     &-nav {
       color: vars.$lightColor;
       text-decoration: none;
+
+      &.active {
+        color: vars.$mainColor;
+      }
     }
   }
-}
-
-.back-to-top {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  img {
-    filter: invert(100%);
-  }
-  &:hover img {
-    transition: .3s;
-    filter: invert(49%) sepia(13%) saturate(1807%) hue-rotate(225deg) brightness(93%) contrast(86%);
-  }
-
 }

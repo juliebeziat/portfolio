@@ -1,7 +1,7 @@
 @use '../../style/vars';
 
 .menu {
-  position: absolute;
+  position: fixed;
   width: 10em;
   z-index: 10;
   background-color: vars.$backgroundColor;
