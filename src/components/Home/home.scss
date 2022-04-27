@@ -2,65 +2,95 @@
 @use '../../style/mixins';
 
 .home {
-  margin-top: 7em;
-
+  padding-top: 7em;
   @media screen and (min-width: 1024px) {
     width: 70%;
   }
 
   &-title {
+    font-size: 3em;
     @media screen and (min-width: 1024px) {
       font-size: 4em;
     }
-
-    font-size: 3em;
+    @media screen and (max-width: 320px) {
+      font-size: 2em;
+    }
+    span {
+      color: vars.$secondaryColor;
+    }
     margin-bottom: 1em;
   }
 
   &-text {
     @media screen and (min-width: 1024px) {
       font-size: 2em;
+      width: 70%;
     }
 
     font-size: 1.5em;
     line-height: 1.3em;
 
-    span {
-      text-decoration: underline;
+    &-underline {
+      border-bottom: 5px solid vars.$thirdColor;
+    }
+
+    &-arrow {
+      color: vars.$mainColor;
+    }
+
+    &-dot {
+      color: vars.$secondaryColor;
     }
   }
 
-  &-button {
-    margin-top: 4em;
+  &-profile {
+    margin-top: 5em;
+    display: flex;
+    padding: 1em;
+    background-color: vars.$hoverColor;
+    border-radius: .3em;
+    img {
+      width: 70px;
+      border-radius: 20em;
+    }
+    width: fit-content;
 
-    &-cv {
-      @include mixins.appButton;
-      @media screen and (min-width: 1024px) {
-        width: 150px;
+    &-content {
+      margin-left: 1em;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-around;
+
+      &-title {
+        width: 100%;
       }
-      width: 120px;
-      background-color: vars.$darkColor;
-      color: vars.$lightColor;
-      margin-right: 2em;
 
-      img {
-        width: 10px;
-        height: 10px;
-        transform: rotate(315deg);
-        padding: 0 .5em;
-        filter: invert(100%);
-      }
+      &-links {
+        font-size: .9em;
+        display: flex;
+        flex-wrap: nowrap;
 
-      &:hover {
-        background-color: vars.$infoColor;
-        color: vars.$lightColor;
-        transition: 0.3s;
+        &-1 {
+          margin-right: 1em;
+          &:hover {
+            transition: 0.3s;
+            color: vars.$thirdColor;
+          }
+        }
 
-        img {
-          filter: invert(100%);
+        &-2 {
+          &:hover {
+            transition: 0.3s;
+            color: vars.$mainColor;
+          }
+        }
+
+        &-1, &-2 {
+          text-decoration: none;
+          color: vars.$lightColor;
+
         }
       }
     }
-
   }
 }
