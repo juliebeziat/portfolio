@@ -1,0 +1,129 @@
+@use '../../style/vars';
+@use '../../style/mixins';
+
+.projects {
+  margin: 3em 0 2em 1em;
+  &-title {
+    @include mixins.mainTitle;
+    margin-bottom: 1.5em;
+    span {
+      color: vars.$thirdColor;
+      font-family: source-code-pro, 'Courier New', monospace;
+    }
+  }
+
+  &-list {
+    width: 100%;
+
+    &-content {
+      @media screen and (min-width: 1024px) {
+        display: flex;
+      }
+    }
+
+    &-container {
+      @media screen and (min-width: 1440px) {
+        width: 35%;
+        margin-right: 8em;
+      }
+      @media screen and (min-width: 1024px) and (max-width: 1440px) {
+        width: 100%;
+        margin-right: 8em;
+      }
+      margin-right: 3em;
+    }
+
+    &-title {
+      margin-bottom: 1em;
+      h2 {
+        font-size: 1.5em;
+        margin-bottom: .5em;
+      }
+      h3 {
+        font-size: 1.1em;
+        font-weight: 200;
+      }
+    }
+
+    &-description {
+      font-weight: 300;
+      font-size: .8em;
+      line-height: 1.2em;
+      text-align: justify;
+
+      p {
+        margin-bottom: 1em;
+
+        a {
+          color: vars.$lightColor;
+        }
+      }
+    }
+
+    &-technos {
+      font-size: .7em;
+      margin: 2em 0;
+
+      span {
+        padding: .2em .8em;
+        border-radius: 2em;
+        margin-right: 1em;
+
+        &:nth-child(1) {
+          background-color: rgba(vars.$react, .2);
+          border: 1px solid vars.$react;
+        }
+
+        &:nth-child(2) {
+          background-color: rgba(vars.$react, .2);
+          border: 1px solid vars.$react;
+        }
+
+        &:nth-child(3) {
+          background-color: rgba(vars.$redux, .2);
+          border: 1px solid vars.$redux;
+        }
+      }
+    }
+
+    &-buttons {
+      margin-top: 3em;
+      margin-bottom: 3em;
+      a {
+        @include mixins.buttonLink;
+      }
+    }
+
+    &-screenshots {
+      @media screen and (min-width: 1440px) {
+        width: 60%;
+      }
+      margin-bottom: 5em;
+      &-desktop {
+        img {
+          @media screen and (max-width: 1024px) {
+            max-width: 80%;
+            margin: auto;
+            display: block;
+          }
+          max-width: 100%;
+          object-fit: contain;
+          border-radius: .5em;
+          background-color: vars.$hoverColor;
+          padding: 1em;
+        }
+      }
+    }
+  }
+}
+
+.portfolio {
+  .projects-list-buttons {
+    a {
+      background-color: darken($color: vars.$secondaryColor, $amount: 20%);
+      &:hover {
+        background-color: vars.$secondaryColor;
+      }
+    }
+  }
+}
