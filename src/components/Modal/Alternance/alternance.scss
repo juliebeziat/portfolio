@@ -5,12 +5,6 @@
   @include mixins.modalBackground;
   
   &-content {
-    img {
-      width: 18px;
-      @include mixins.filterMainColor;
-      position: fixed;
-      right: 20px;
-    }
     @include mixins.modalContent;
     @media screen and (max-width: 768px) {
       width: 80%;
@@ -19,6 +13,14 @@
     height: fit-content;
     padding: 1em;
     border-radius: .1em;
+    
+    img {
+      width: 18px;
+      @include mixins.filterMainColor;
+      position: fixed;
+      right: 20px;
+      cursor: pointer;
+    }
 
     h2 {
       font-family: source-code-pro, 'Courier New', monospace;
