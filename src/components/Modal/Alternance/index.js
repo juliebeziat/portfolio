@@ -1,15 +1,15 @@
 /* eslint-disable max-len */
-import { useRef, useState } from 'react';
+import PropTypes from 'prop-types';
+import { useRef } from 'react';
 import './alternance.scss';
 import Cross from '../../../assets/icons/cross.svg';
 import useOnClickOutside from '../../../functions/useOnClickOutside';
 
-const ModalAlt = () => {
-  const [openModal, setOpenModal] = useState(true);
-
+const ModalAlt = ({ openModal, setOpenModal }) => {
   // Function used to close modal wherever we click
   const ref = useRef();
   useOnClickOutside(ref, () => setOpenModal(false));
+
   return (
     <div>
       {openModal && (
@@ -34,6 +34,11 @@ const ModalAlt = () => {
       )}
     </div>
   );
+};
+
+ModalAlt.propTypes = {
+  openModal: PropTypes.bool.isRequired,
+  setOpenModal: PropTypes.func.isRequired,
 };
 
 export default ModalAlt;

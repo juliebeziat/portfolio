@@ -8,6 +8,11 @@ import Portrait from '../../assets/icons/portrait-julie.png';
 
 const Home = () => {
   const [openModal, setOpenModal] = useState(false);
+
+  const toggleModal = () => {
+    setOpenModal(!openModal);
+  };
+
   return (
     <div className="app-container">
       <div className="home" id="home">
@@ -15,12 +20,8 @@ const Home = () => {
         <p className="home-text">
           Je suis Julie Beziat, développeuse web junior et je recherche une
           <span className="home-text-arrow">=&gt;</span>
-          <span
-            className="home-text-underline"
-            onClick={() => setOpenModal(!openModal)}
-          >
-            alternance
-          </span>
+          <span className="home-text-underline">*</span>
+          <button type="button" onClick={(toggleModal)}>alternance</button>
           pour Juin 2022 <span className="home-text-dot">••</span>
         </p>
         <div className="home-profile">
@@ -34,7 +35,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {openModal && <ModalAlt />}
+      {openModal && <ModalAlt openModal={openModal} setOpenModal={setOpenModal} />}
     </div>
   );
 };
