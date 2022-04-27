@@ -6,10 +6,10 @@ import { Route, Routes } from 'react-router-dom';
 
 // == Import components
 import Menu from '../Menu';
-import Home from '../Home';
 import Skills from '../Skills';
 import Projects from '../Projects';
 import Contact from '../Contact';
+import Home from '../Home';
 
 const App = () => (
   <>
