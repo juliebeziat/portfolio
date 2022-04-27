@@ -30,8 +30,17 @@
     font-size: 1.5em;
     line-height: 1.3em;
 
-    &-underline {
+    &-alt {
       border-bottom: 5px solid vars.$thirdColor;
+      background-color: transparent;
+      color: vars.$lightColor;
+      cursor: pointer;
+      font-size: inherit;
+
+      &:hover {
+        background-color: vars.$hoverColor;
+        transition: .3s;
+      }
     }
 
     &-arrow {

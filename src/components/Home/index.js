@@ -19,10 +19,8 @@ const Home = () => {
         <h1 className="home-title"><span>&#123;</span> Bonjour <span>&#125;</span></h1>
         <p className="home-text">
           Je suis Julie Beziat, développeuse web junior et je recherche une
-          <span className="home-text-arrow">=&gt;</span>
-          <span className="home-text-underline">*</span>
-          <button type="button" onClick={(toggleModal)}>alternance</button>
-          pour Juin 2022 <span className="home-text-dot">••</span>
+          <span className="home-text-arrow">=&gt; </span>
+          <button className="home-text-alt" type="button" onClick={(toggleModal)}>alternance</button> pour Juin 2022 <span className="home-text-dot">••</span>
         </p>
         <div className="home-profile">
           <img src={Portrait} alt="portrait" />

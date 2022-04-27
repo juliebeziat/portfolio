@@ -5,6 +5,17 @@
   @include mixins.modalBackground;
   
   &-content {
+    animation: fadeIn 1s;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
     @include mixins.modalContent;
     @media screen and (max-width: 768px) {
       width: 80%;
@@ -13,7 +24,7 @@
     height: fit-content;
     padding: 1em;
     border-radius: .1em;
-    
+
     img {
       width: 18px;
       @include mixins.filterMainColor;
