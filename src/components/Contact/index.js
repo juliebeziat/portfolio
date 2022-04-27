@@ -6,6 +6,8 @@ import Mail from '../../assets/icons/mail.svg';
 import Phone from '../../assets/icons/phone.svg';
 import Arrow from '../../assets/icons/arrow.svg';
 
+import ModalCV from '../Modal/CV';
+
 const Contact = () => (
   <div className="contact" id="contact">
     <div className="contact-title">
@@ -33,6 +35,7 @@ const Contact = () => (
         </div>
       </div>
     </div>
+    <ModalCV />
   </div>
 );
 
