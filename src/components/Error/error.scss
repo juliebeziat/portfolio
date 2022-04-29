@@ -1,0 +1,16 @@
+@use '../../style/vars';
+
+.error {
+  margin-top: 2em;
+  text-align: center;
+  h1 {
+    font-size: 1.5em;
+  }
+  img {
+    width: 150px;
+    margin-bottom: 1em;
+  }
+  a {
+    color: vars.$mainColor;
+  }
+}
