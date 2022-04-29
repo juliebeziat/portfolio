@@ -1,6 +1,7 @@
 // == Import utils
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import useOnClickOutside from '../../functions/useOnClickOutside';
 
 // == Import style
 import './mobilemenu.scss';
@@ -15,6 +16,9 @@ const MobileMenu = () => {
     setOpen(!open);
   };
 
+  const ref = useRef();
+  useOnClickOutside(ref, () => setOpen(false));
+
   return (
     <div>
       <hr />
@@ -24,15 +28,15 @@ const MobileMenu = () => {
         </button>
       </div>
       {open && (
-      <div className="menu">
+      <div className="menu" ref={ref}>
         <button type="button" onClick={toggleMenu} className="menu-burger close">
           <img src={Cross} alt="" />
         </button>
         <nav className="menu-navbar">
-          <NavLink to="/" className="menu-navbar-nav">Home</NavLink>
-          <NavLink to="/competences" className="menu-navbar-nav">Compétences</NavLink>
-          <NavLink to="/projets" className="menu-navbar-nav">Projets</NavLink>
-          <NavLink to="/contact" className="menu-navbar-nav">Contact</NavLink>
+          <NavLink onClick={toggleMenu} to="/" className="menu-navbar-nav">Home</NavLink>
+          <NavLink onClick={toggleMenu} to="/competences" className="menu-navbar-nav">Compétences</NavLink>
+          <NavLink onClick={toggleMenu} to="/projets" className="menu-navbar-nav">Projets</NavLink>
+          <NavLink onClick={toggleMenu} to="/contact" className="menu-navbar-nav">Contact</NavLink>
         </nav>
       </div>
       )}

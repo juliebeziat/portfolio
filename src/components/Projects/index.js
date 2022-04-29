@@ -27,7 +27,7 @@ const Projects = () => (
           </div>
           <div className="projects-list-buttons">
             <a href="https://youtu.be/yBA6xYkmB5s?t=1477" target="_blank" rel="noreferrer">Voir la démo sur YouTube <img src={Arrow} alt="" /></a>
-            <a href="https://github.com/juliebeZiat?tab=repositories" target="_blank" rel="noreferrer">Repo GitHub <img src={Arrow} alt="" /></a>
+            <a href="https://github.com/juliebeZiat/ultimate-list" target="_blank" rel="noreferrer">Repo GitHub <img src={Arrow} alt="" /></a>
           </div>
         </div>
         <div className="projects-list-screenshots">

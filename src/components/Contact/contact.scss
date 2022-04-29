@@ -61,6 +61,26 @@
       a {
         @include mixins.buttonLink;
       }
+      button {
+        font-family: source-code-pro, 'Courier New', monospace;
+        background-color: darken($color: vars.$secondaryColor, $amount: 20%);
+        padding: .8em;
+        border-radius: .1em;
+        color: vars.$lightColor;
+        cursor: pointer;
+        height: min-content;
+
+        &:hover {
+          background-color: vars.$secondaryColor;
+          transition: .3s;
+        }
+
+        img {
+          filter: invert(100%);
+          transform: rotate(180deg);
+          width: 10px;
+        }
+      }
     }
 
     &-content {
