@@ -16,7 +16,7 @@ import Home from '../Home';
 import Error from '../Error';
 
 const App = () => {
-  const [darkTheme, setDarkTheme] = useState(true);
+  const [darkTheme, setDarkTheme] = useState(false);
 
   return (
     <div id={darkTheme ? 'light-mode' : 'dark-mode'}>
