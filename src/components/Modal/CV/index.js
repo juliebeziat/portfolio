@@ -18,7 +18,7 @@ const ModalCV = ({ openModal, setOpenModal }) => {
             <h1>Voulez-vous télécharger mon CV ?</h1>
             <div className="modal-cv-buttons">
               {/* Download file to check when built */}
-              <button type="button"><a target="_blank" href="../../../assets/cv-julie-beziat.pdf" download rel="noopener noreferrer">Oui 😉</a></button>
+              <a target="_blank" href="../../../assets/cv-julie-beziat.pdf" download rel="noopener noreferrer">Oui 😉</a>
               <button type="button" onClick={() => setOpenModal(false)}>Non, pas encore 🙃</button>
             </div>
           </div>

@@ -19,6 +19,7 @@
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
@@ -44,36 +45,59 @@
       display: flex;
       justify-content: space-around;
     }
+
     margin: auto;
     width: 80%;
-    
-    button {
+
+    a {
+      display: block;
+      width: fit-content;
+      margin: auto;
+      text-decoration: none;
+      color: vars.$lightColor;
+      background-color: vars.$secondaryColor;
       cursor: pointer;
       padding: 1em;
       border-radius: .1em;
+      font-size: .8em;
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: 1em;
+      }
+
+      &:hover {
+        background-color: darken($color: vars.$secondaryColor, $amount: 10%);
+        transition: .3s;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      height: fit-content;
+      margin: auto;
+      display: block;
+      padding: 1em;
+      border-radius: .1em;
+      background-color: darken($color: vars.$lightColor, $amount: 50%);
+      color: vars.$lightColor;
+
       a {
         text-decoration: none;
         color: vars.$lightColor;
       }
-      &:nth-child(1) {
-        background-color: vars.$secondaryColor;
 
-        &:hover {
-          background-color: darken($color: vars.$secondaryColor, $amount: 10%);
-          transition: .3s;
-        }
-      }
-
-      &:nth-child(2) {
-        background-color: darken($color: vars.$lightColor, $amount: 50%);
-        color: vars.$lightColor;
-
-        &:hover {
-          background-color: vars.$lightColor;
-          color: darken($color: vars.$lightColor, $amount: 50%);
-          transition: .3s;
-        }
+      &:hover {
+        background-color: vars.$lightColor;
+        color: darken($color: vars.$lightColor, $amount: 50%);
+        transition: .3s;
       }
     }
+  }
+}
+
+// Light mode style
+#light-mode {
+  .modal-cv-content {
+    background-color: #EDEDED;
   }
 }

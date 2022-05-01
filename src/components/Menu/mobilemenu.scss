@@ -1,5 +1,11 @@
 @use '../../style/vars';
 
+.mobile-menu-container {
+  hr {
+    margin-top: 0;
+  }
+}
+
 .menu {
   position: fixed;
   width: 10em;

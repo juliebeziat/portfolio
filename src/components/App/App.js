@@ -13,7 +13,7 @@ import Home from '../Home';
 import Error from '../Error';
 
 const App = () => (
-  <>
+  <div id="light-mode">
     <Menu />
     <div className="App">
       <Routes>
@@ -24,7 +24,7 @@ const App = () => (
         <Route path="/*" element={<Error />} />
       </Routes>
     </div>
-  </>
+  </div>
 );
 
 export default App;

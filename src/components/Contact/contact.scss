@@ -3,7 +3,7 @@
 
 .contact {
   margin: 3em 0 2em 1em;
-
+  height: 100vh;
   &-title {
     h1 {
       @include mixins.mainTitle;
@@ -35,7 +35,7 @@
     }
 
     p {
-      font-weight: 200;
+      font-weight: 300;
       line-height: 1.2em;
       margin-bottom: 1em;
       font-size: .9em;
@@ -109,6 +109,38 @@
         }
       }
 
+    }
+  }
+}
+
+// Light mode style
+#light-mode {
+
+  .infos-links {
+    a {
+      background-color: vars.$mainColor;
+      &:hover {
+        background-color: darken($color: vars.$mainColor, $amount: 20%);
+        transition: .3s;
+      }
+    }
+
+    button {
+      background-color: vars.$secondaryColor;
+      &:hover {
+        background-color: darken($color: vars.$secondaryColor, $amount: 20%);
+        transition: .3s;
+      }
+    }
+  }
+
+  .infos-content {
+    a {
+      color: vars.$darkColor;
+    }
+
+    img {
+      filter: invert(0);
     }
   }
 }
