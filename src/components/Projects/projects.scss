@@ -127,3 +127,43 @@
     }
   }
 }
+
+// Light mode style
+#light-mode {
+  .projects-list-description {
+    a {
+      color: vars.$darkColor;
+    }
+  }
+
+  .projects-list-buttons {
+    a {
+      &:nth-child(1) {
+        background-color: vars.$mainColor;
+        &:hover {
+          background-color: darken($color: vars.$mainColor, $amount: 20%);
+          transition: .3s;
+        }
+      }
+
+      &:nth-child(2) {
+        background-color: vars.$secondaryColor;
+        &:hover {
+          background-color: darken($color: vars.$secondaryColor, $amount: 20%);
+          transition: .3s;
+        }
+      }
+    }
+  }
+
+  .portfolio {
+    .projects-list-buttons {
+      a {
+        background-color: vars.$secondaryColor;
+        &:hover {
+          background-color: darken($color: vars.$secondaryColor, $amount: 20%);
+        }
+      }
+    }
+  }
+}

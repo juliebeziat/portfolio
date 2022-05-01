@@ -7,9 +7,18 @@ body {
     monospace;
   }
   font-family: 'Inter', sans-serif;
-  background-color: vars.$backgroundColor;
-  color: vars.$lightColor;
+
   ::selection {
     background-color: vars.$mainColor;
+  }
+  
+  #dark-mode {
+    background-color: vars.$backgroundColor;
+    color: vars.$lightColor;
+  }
+  
+  #light-mode {
+    background-color: vars.$lightColor;
+    color: vars.$darkColor;
   }
 }

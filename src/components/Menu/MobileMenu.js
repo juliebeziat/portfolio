@@ -20,7 +20,7 @@ const MobileMenu = () => {
   useOnClickOutside(ref, () => setOpen(false));
 
   return (
-    <div>
+    <div className="mobile-menu-container">
       <hr />
       <div>
         <button type="button" onClick={toggleMenu} className="menu-burger open">

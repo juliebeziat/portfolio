@@ -1,8 +1,55 @@
 @use 'src/style/vars';
+@use 'src/style/mixins';
 
 .App {
-    @media screen and (min-width: 1024px) {
-        padding: 1em 5em;
-    }
-    padding: 1em;
+  @media screen and (min-width: 1024px) {
+    padding: 1em 5em;
+  }
+  padding: 1em;
+
+}
+
+.change-mode {
+  top: 25px;
+  right: 80px;
+  position: fixed;
+  background-color: vars.$hoverColor;
+  display: flex;
+  padding: .5em;
+  border-radius: 10em;
+  cursor: pointer;
+
+  @media screen and (max-width: 1024px) {
+    top: 15px;
+    left: 10px;
+    right: inherit;
+  }
+  
+  &-circle-dark {
+    background-color: vars.$lightColor;
+    width: 20px;
+    height: 20px;
+    border-radius: 20em;
+  }
+
+  &-icon-dark {
+    @include mixins.filterSecondaryColor;
+    margin-left: 1em;
+    width: 20px;
+    transform: rotate(215deg);
+  }
+
+  &-circle-light {
+    background-color: vars.$darkColor;
+    width: 20px;
+    height: 20px;
+    border-radius: 20em;
+  }
+
+  &-icon-light {
+    @include mixins.filterThirdColor;
+    margin-right: 1em;
+    width: 20px;
+    transform: rotate(215deg);
+  }
 }

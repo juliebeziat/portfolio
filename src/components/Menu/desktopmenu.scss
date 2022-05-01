@@ -30,3 +30,13 @@ hr {
   background: linear-gradient(90deg, rgba(3,196,161,1) 0%, rgba(145,107,191,1) 51%, rgba(242,125,91,1) 100%);
   border: none;
 }
+
+// Light mode style
+#light-mode {
+  .desktop-menu-nav {
+    color: vars.$darkColor;
+    &.active {
+      color: vars.$mainColor;
+    }
+  }
+}
