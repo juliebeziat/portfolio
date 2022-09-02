@@ -17,6 +17,7 @@ import Error from '../Error';
 
 const App = () => {
   const [darkTheme, setDarkTheme] = useState(false);
+  document.body.style.backgroundColor = darkTheme ? 'white' : '#121212';
 
   return (
     <div id={darkTheme ? 'light-mode' : 'dark-mode'}>

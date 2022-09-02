@@ -2,7 +2,12 @@
 @use '../../style/mixins';
 
 .projects {
-  margin: 3em 0 2em 1em;
+  overflow: scroll;
+  height: 100vh;
+  @media screen and (min-width: 1024px) {
+    padding: 3em 5em 10em 1em;
+  }
+  padding: 3em 1em 2em 1em;
   &-title {
     @include mixins.mainTitle;
     margin-bottom: 1.5em;
@@ -13,6 +18,7 @@
   }
 
   &-list {
+    margin-bottom: 10em;
     width: 100%;
 
     &-content {
@@ -112,17 +118,6 @@
           background-color: vars.$hoverColor;
           padding: 1em;
         }
-      }
-    }
-  }
-}
-
-.portfolio {
-  .projects-list-buttons {
-    a {
-      background-color: darken($color: vars.$secondaryColor, $amount: 20%);
-      &:hover {
-        background-color: vars.$secondaryColor;
       }
     }
   }

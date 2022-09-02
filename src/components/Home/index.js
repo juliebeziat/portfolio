@@ -4,7 +4,7 @@ import ModalAlt from '../Modal/Alternance';
 
 // == Import style
 import './home.scss';
-import Portrait from '../../assets/icons/portrait-julie.png';
+import Portrait from '../../assets/icons/portrait.jpeg';
 
 const Home = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -15,6 +15,9 @@ const Home = () => {
         <h1 className="home-title"><span>&#123;</span> Bonjour <span>&#125;</span></h1>
         <p className="home-text">
           Je suis Julie Beziat, développeuse web junior <span className="home-text-dot">••</span>
+        </p>
+        <p className="home-text">
+          Actuellement chez <span className="home-text-arrow">►</span> <a target="_blank" rel="noreferrer" href="https://azot.dev/" className="home-text-link">AZOT.dev</a>
         </p>
         <div className="home-profile">
           <img src={Portrait} alt="portrait" />

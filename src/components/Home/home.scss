@@ -2,7 +2,6 @@
 @use '../../style/mixins';
 
 .app-container {
-  height: 100vh;
   box-sizing: border-box;
 }
 
@@ -54,6 +53,17 @@
 
     &-dot {
       color: vars.$thirdColor;
+    }
+
+    &-link {
+      &:hover {
+        background-color: vars.$mainColor;
+        transition: .3s;
+      }
+      font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+      color: vars.$lightColor;
+      text-decoration: none;
+      padding: .1em;
     }
   }
 
@@ -111,6 +121,10 @@
 // Light mode style
 #light-mode {
   .home-text-alt {
+    color: vars.$darkColor;
+  }
+
+  .home-text-link {
     color: vars.$darkColor;
   }
 

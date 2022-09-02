@@ -3,7 +3,10 @@
 
 .contact {
   margin: 3em 0 2em 1em;
-  height: 100vh;
+  @media screen and (max-width: 1024px) {
+    overflow: scroll;
+    height: 100vh;
+  }
   &-title {
     h1 {
       @include mixins.mainTitle;
@@ -39,6 +42,54 @@
       line-height: 1.2em;
       margin-bottom: 1em;
       font-size: .9em;
+    }
+
+    &-timeline {
+      width:80%;
+      padding:30px 20px;
+
+      ul {
+        border-left:1px solid vars.$mainColor;
+        padding:10px 5px;
+
+        li {
+          padding:20px 20px;
+          position:relative;
+          transition:.5s;
+
+          span {
+            display:inline-block;
+            padding: .2em .8em;
+            border-radius: 2em;
+            margin-right: 1em;
+            margin-bottom: 1em;
+            background-color: rgba(vars.$thirdColor, .2);
+            border: 1px solid vars.$thirdColor;
+          }
+
+          &:before {
+            position:absolute;
+            content:'';
+            width:10px;
+            height:10px;
+            background-color: vars.$mainColor;
+            border-radius:50%;
+            left:-11px;
+            top:28px;
+            transition:.5s;
+          }
+        }
+      }
+
+      &-content {
+        p {          
+          margin-top: .2em;
+          &:before {
+            content: '►';
+            padding-right: .5em;
+          }
+        }
+      }
     }
   }
 
@@ -85,6 +136,7 @@
 
     &-content {
       @media screen and (max-width: 1024px) {
+        margin-bottom: 10em;
         width: fit-content;
       }
       background-color: vars.$hoverColor;

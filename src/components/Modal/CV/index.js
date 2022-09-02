@@ -2,7 +2,7 @@ import './cv.scss';
 import PropTypes from 'prop-types';
 import { useRef } from 'react';
 import Cross from '../../../assets/icons/cross.svg';
-import useOnClickOutside from '../../../functions/useOnClickOutside';
+import useOnClickOutside from '../../../utils/useOnClickOutside';
 
 const ModalCV = ({ openModal, setOpenModal }) => {
   // Function used to close modal wherever we click

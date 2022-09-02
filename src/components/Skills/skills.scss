@@ -1,115 +1,128 @@
 @use '../../style/vars';
 @use '../../style/mixins';
 
-#competences {
-  margin-bottom: 10em;
-  margin: 3em 0 2em 1em;
-}
-
-.skills {
-  @media screen and (max-width: 1440px) {
-    margin-bottom: 5em;
+.competences {
+  overflow: scroll;
+  height: 95vh;
+  @media screen and (min-width: 1024px) {
+    padding: 3em 0 10em 1em;
   }
-  &-title {
-    @include mixins.mainTitle;
+  padding: 3em 1em 2em 1em;
 
-    & span {
-      font-family: source-code-pro, 'Courier New', monospace;
-      color: vars.$thirdColor;
+  .skills {
+    @media screen and (max-width: 1440px) {
+      margin-bottom: 5em;
     }
-  }
-
-  .subtitle {
-    font-size: 1.2em;
-
-    span {
-      color: vars.$mainColor;
-    }
-  }
-
-  &-list {
-    display: flex;
-    flex-wrap: wrap;
-    @media screen and (min-width: 1440px) {
-      width: 60%;
-    }
-    @media screen and (min-width: 1024px) {
-      width: 70%;
-    }
-
-    &-skill {
-      width: 7em;
-      @media screen and (max-width: 320px) {
-        width: 5em;
+    &-title {
+      @include mixins.mainTitle;
+  
+      & span {
+        font-family: source-code-pro, 'Courier New', monospace;
+        color: vars.$thirdColor;
       }
-      background-color: vars.$hoverColor;
-      margin: 3em 3em 1em 0;
-      min-height: 7em;
+    }
+  
+    .subtitle {
+      font-size: 1.2em;
+  
+      span {
+        color: vars.$mainColor;
+      }
+    }
+  
+    &-list {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      padding: 1em;
-      border-radius: .5em;
-      font-size: .8em;
-      text-align: center;
-
-      &:nth-child(odd) {
-        img {
-          @include mixins.filterMainColor;
+      @media screen and (min-width: 1440px) {
+        width: 60%;
+      }
+      @media screen and (min-width: 1024px) {
+        width: 70%;
+      }
+  
+      &-skill {
+        width: 7em;
+        @media screen and (max-width: 320px) {
+          width: 5em;
+        }
+        background-color: vars.$hoverColor;
+        margin: 3em 3em 1em 0;
+        min-height: 7em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1em;
+        border-radius: .5em;
+        font-size: .8em;
+        text-align: center;
+  
+        &:nth-child(odd) {
+          img {
+            @include mixins.filterMainColor;
+          }
+        }
+  
+        &:nth-child(even) {
+          img {
+            @include mixins.filterSecondaryColor;
+          }
+        }
+  
+        &:hover {
+          transition: .8s;
+          box-shadow: 0px 0px 20px 2px rgba(255, 255, 255, 0.4);
+        }
+  
+        &-icon {
+          padding: 1em 2em;
+          width: 40px;
+          height: 40px;
+  
         }
       }
-
-      &:nth-child(even) {
-        img {
-          @include mixins.filterSecondaryColor;
-        }
+    }
+  }
+  
+  .secondary-skills {
+    margin-top: 5em;
+    margin-bottom: 10em;
+  
+    .subtitle {
+      font-size: 1.2em;
+      margin-bottom: 2em;
+  
+      span {
+        color: vars.$secondaryColor;
       }
-
-      &:hover {
-        transition: .8s;
-        box-shadow: 0px 0px 20px 2px rgba(255, 255, 255, 0.4);
+    }
+  
+    &-lists {
+      @media screen and (min-width: 426px) {
+        display: flex;
+        flex-wrap: wrap;
+        width: 400px;
       }
-
-      &-icon {
-        padding: 1em 2em;
-        width: 40px;
-        height: 40px;
-
+  
+      &-subtitle {
+        font-weight: 500;
+        margin-bottom: .5em;
       }
+    }
+  
+    ul {
+      ::before {
+        content: '•';
+        margin-right: .5em;
+      }
+      margin-right: 1em;
+      @media screen and (min-width: 769px) {
+        margin-right: 10em;
+      }
+      line-height: 1.5em;
     }
   }
 }
 
-.secondary-skills {
-  margin-top: 5em;
-
-  .subtitle {
-    font-size: 1.2em;
-    margin-bottom: 2em;
-
-    span {
-      color: vars.$secondaryColor;
-    }
-  }
-
-  &-lists {
-    @media screen and (min-width: 426px) {
-      display: flex;
-    }
-  }
-
-  ul {
-    ::before {
-      content: '•';
-      margin-right: .5em;
-    }
-    margin-right: 1em;
-    @media screen and (min-width: 769px) {
-      margin-right: 10em;
-    }
-    line-height: 1.5em;
-  }
-}
 
 // Light mode style
 #light-mode {

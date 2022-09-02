@@ -1,7 +1,7 @@
 // == Import utils
 import { NavLink } from 'react-router-dom';
 import { useState, useRef } from 'react';
-import useOnClickOutside from '../../functions/useOnClickOutside';
+import useOnClickOutside from '../../utils/useOnClickOutside';
 
 // == Import style
 import './mobilemenu.scss';
